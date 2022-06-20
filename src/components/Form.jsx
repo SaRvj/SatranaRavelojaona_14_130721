@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Select from 'react-select';
-import { DatePicker} from "simple-datepicker-react"; 
-import departments from '../datas/departments.js';
-import states from '../datas/states.js';
-import save from "../functions/saveEmployes.js";
-import resetEmployee from "../functions/resetForm";
+import DatePicker from "react-datepicker"; 
+import departments from '../data/department';
+import states from '../data/state';
+import save from "../utils/functions/saveEmployee";
+import resetEmployee from "../utils/functions/resetForm";
 import Modal from 'react-modal';
-import customStyles from "../utils/modalStyleCustomization";
+import customStyles from "../utils/modalCustumization/modalStyleCustomization";
 
 function Form () {
     const [modalIsOpen, setModalIsOpen] = useState(false);
