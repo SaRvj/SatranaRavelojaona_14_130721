@@ -1,13 +1,17 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CreateEmployee from "./pages/CreateEmployee";
+import React, {useState} from "react";
+import CreateEmployee from "./pages/CreateEmployee"
+import EmployeeList from "./pages/EmployeeList"
 
-export default function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<CreateEmployee />} />
-      </Routes>
-    </Router>
-  );
+import { EmployeeContext } from "./context/EmployeeContext"
+
+function App(){
+    const [employees, setEmployees] = useState([])
+    return (
+        <EmployeeContext.Provider value={{employees, setEmployees}}>
+            <CreateEmployee/>
+            <EmployeeList/>
+        </EmployeeContext.Provider>
+    )
 }
+
+export default App;
