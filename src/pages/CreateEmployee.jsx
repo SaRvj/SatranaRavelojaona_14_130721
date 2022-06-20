@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import  Form  from "../composants/Form"
+import  Form  from "../components/Form"
 
 export default function CreateEmployee () {
   return(
