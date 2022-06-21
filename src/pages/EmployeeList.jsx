@@ -1,12 +1,13 @@
 import React  from 'react'
 import { Link } from "react-router-dom";
-import TableEmployee from "../composants/TableEmployee";
-import './../sass/style.scss';
-import columns from '../datas/columnsTableEmployee.js';
-import Styles from "../styled/customStyleTableEmployee.js";
+import TableEmployee from "../components/EmployeeTable";
+import '../css/style.css';
+import columns from '../data/employeeColumnsTable';
+import Styles from "../utils/modalCustumization/tableEmployeeStyleCustomization";
 import employees from "../data/employeeList"
 
 export default function EmployeeList () {
+    // eslint-disable-next-line
     const data = React.useMemo(() => employees, [employees])
 
     return(
