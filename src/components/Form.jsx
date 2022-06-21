@@ -21,10 +21,10 @@ function Form () {
     function handleSubmit(e) {
         e.preventDefault()
         if(firstname !== "" && lastname!== "" && street !== "" && city !== "" &&  zipCode !== "" &&
-        document.getElementById('department').querySelector(".css-qc6sy-singleValue") &&
-        document.getElementById('state').querySelector(".css-qc6sy-singleValue") &&
-        document.getElementById('date-of-birth').value !== "" && 
-        document.getElementById('start-date').value !== ""
+            document.getElementById('department').querySelector(".css-qc6sy-singleValue") &&
+            document.getElementById('state').querySelector(".css-qc6sy-singleValue") &&
+            document.getElementById('date-of-birth').value !== "" && 
+            document.getElementById('start-date').value !== ""
         ){
             save(firstname, lastname, street, city, zipCode)
             resetEmployee(e, setFirstname, setLastname, setStreet, setCity, setZipCode, setDateBirth, setStartDate)
