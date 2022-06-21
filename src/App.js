@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import CreateEmployee from "./pages/CreateEmployee"
-import EmployeeList from "./pages/EmployeeList"
-
 import { EmployeeContext } from "./context/EmployeeContext"
+import EmployeeList from "./pages/EmployeeList"
 
 function App(){
     const [employees, setEmployees] = useState([])

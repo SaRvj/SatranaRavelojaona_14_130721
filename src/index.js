@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as  Router, Routes, Route } from "react-router-dom";
 import './css/style.css';
 import CreateEmployee from './pages/CreateEmployee';
+import EmployeeList from "./pages/EmployeeList"
 import reportWebVitals from './reportWebVitals';
 
 
@@ -11,6 +12,7 @@ ReactDOM.render(
     <Router>
       <Routes>
           <Route path="/" element={<CreateEmployee />}/>
+          <Route path="/employeeList" element={<EmployeeList />}/>
       </Routes>
     </Router>
   </React.StrictMode>,
