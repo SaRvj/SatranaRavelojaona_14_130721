@@ -1,3 +1,7 @@
+/**
+ * @param {number} props props.pageIndex
+ * @returns display number of page views
+ */
 function ShowEntries(props) {
     return (
         <div className="employeeList-table-pagination">

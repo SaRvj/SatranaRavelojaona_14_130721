@@ -1,3 +1,6 @@
+/**
+ * Save employee data in the employees table
+ */
 import employees from "../../data/employeeList";
 
  function SaveEmployees(firstname, lastname, street, city, zipCode) {

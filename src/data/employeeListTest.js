@@ -1,3 +1,6 @@
+/**
+ * employee information for testing
+ */
 export const employeeListTest = [
     {
       employee: {

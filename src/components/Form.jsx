@@ -8,6 +8,14 @@ import resetEmployee from "../utils/functions/resetForm";
 import Modal from 'react-modal';
 import customStyles from "../utils/modalCustumization/modalStyleCustomization";
 
+
+/**
+ * create employee form
+ * @returns form for create employee
+ * @func saveEmployee save datas of employee
+ * @const { booleen } modalIsOpen - verify if modal is open or close
+ * @func closeModal close the modale
+ */
 function Form () {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [firstname, setFirstname] = useState("")

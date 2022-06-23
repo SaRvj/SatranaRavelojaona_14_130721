@@ -2,8 +2,11 @@ import React from 'react'
 import { useAsyncDebounce } from 'react-table'
 import Select from 'react-select';
 
+/**
+ * @returns content of selected elements
+ */
 function GlobalFilter({
-    preGlobalFilteredRows,
+    //preGlobalFilteredRows,
     globalFilter,
     setGlobalFilter,
   }) {
@@ -28,18 +31,23 @@ function GlobalFilter({
     )
 }
 
+/**
+ * display number of employees per page
+ * @param {array} props properties for display of the number employee by page
+ * @returns employee table
+ */
 function TableFilter(props){
     return (  
       <div className="employeeList-table-header">
         <div className="employeeList-table-header_select">
-            Show  <Select options={props.pages}  placeholder={props.pageSize}  onChange={e => {props.setPageSize(Number(e.value)) }}/>  entries
+          Show  <Select options={props.pages}  placeholder={props.pageSize}  onChange={e => {props.setPageSize(Number(e.value)) }}/>  entries
         </div>
         <GlobalFilter
-            preGlobalFilteredRows={props.preGlobalFilteredRows}
-            globalFilter={props.state.globalFilter}
-            setGlobalFilter={props.setGlobalFilter}
-            />
-    </div>
+          preGlobalFilteredRows={props.preGlobalFilteredRows}
+          globalFilter={props.state.globalFilter}
+          setGlobalFilter={props.setGlobalFilter}
+        />
+      </div>
     )
 }
 

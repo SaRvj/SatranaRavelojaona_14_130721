@@ -1,3 +1,6 @@
+/**
+ * contains list of states used in the form
+ */
 const departments = [
     {
         "value": "Sales",

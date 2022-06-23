@@ -1,3 +1,6 @@
+/**
+ * Displays the titles of employee information in columns of the list employee table
+ */
 const employeeColumnsTable = [
     {
         Header: 'first Name',

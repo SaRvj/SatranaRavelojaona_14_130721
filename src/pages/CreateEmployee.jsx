@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import  Form  from "../components/Form"
 
+/**
+ * Page for creating a new employee
+ * @returns creating a new employee
+ */
 export default function CreateEmployee () {
   return(
     <div className="createEmployee">

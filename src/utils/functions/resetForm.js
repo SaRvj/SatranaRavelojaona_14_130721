@@ -1,3 +1,13 @@
+/**
+ * reset the form
+ * @param {string} setFirstname 
+ * @param {string} setLastname 
+ * @param {string} setStreet 
+ * @param {string} setCity 
+ * @param {number} setZipCode 
+ * @param {date} setDateBirth 
+ * @param {date} setStartDate 
+ */
 function ResetForm(e, setFirstname, setLastname, setStreet, setCity, setZipCode,  setDateBirth, setStartDate) {
     
     setFirstname("")
