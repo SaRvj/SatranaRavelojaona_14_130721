@@ -1,7 +1,7 @@
 /**
  * Save employee data in the employees table
  */
-import employees from "../../data/employeeList";
+import employees from "../../data/employeeList.js";
 
  function SaveEmployees(firstname, lastname, street, city, zipCode) {
     const employee = {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Select from 'react-select';
-import DatePicker from "react-datepicker"; 
+//import DatePicker from "react-datepicker"; 
 import departments from '../data/department';
 import states from '../data/state';
 import save from "../utils/functions/saveEmployee";
@@ -24,15 +24,17 @@ function Form () {
     const [city, setCity] = useState("")
     const [zipCode, setZipCode] = useState("")
     const [dateBirth, setDateBirth] = useState('')
-    const [startDate, setStartDate] = useState('')
+    //const [startDate, setStartDate] = useState('')
+    const [startDate, setStartDate] = useState(new Date());
 
     function handleSubmit(e) {
+        console.log (firstname, lastname, street, city, zipCode, startDate, dateBirth, departments);
         e.preventDefault()
-        if(firstname !== "" && lastname!== "" && street !== "" && city !== "" &&  zipCode !== "" &&
-            document.getElementById('department').querySelector(".css-qc6sy-singleValue") &&
-            document.getElementById('state').querySelector(".css-qc6sy-singleValue") &&
-            document.getElementById('date-of-birth').value !== "" && 
-            document.getElementById('start-date').value !== ""
+        if(firstname !== "" && lastname!== "" && street !== "" && city !== "" &&  zipCode !== "" && dateBirth && startDate && departments && states
+            // document.getElementById('department').querySelector(".css-qc6sy-singleValue") &&
+            // document.getElementById('state').querySelector(".css-qc6sy-singleValue") 
+            // document.getElementById('date-of-birth').value !== "" && 
+            // document.getElementById('start-date').value !== ""
         ){
             save(firstname, lastname, street, city, zipCode)
             resetEmployee(e, setFirstname, setLastname, setStreet, setCity, setZipCode, setDateBirth, setStartDate)
@@ -51,9 +53,11 @@ function Form () {
                 <label htmlFor="last-name">Last Name</label>
                 <input type="text" id="last-name" value={lastname} onChange={(e)=>setLastname(e.target.value)}/>
                 <label htmlFor="date-of-birth">Date of Birth</label>
-                <DatePicker idInput="date-of-birth" dateInput={dateBirth} updateDate={setDateBirth}/>
+                {/* <DatePicker idInput="date-of-birth" dateInput={dateBirth} updateDate={setDateBirth}/> */}
+                <input type="date" id="date-of-birth" selected={dateBirth} onChange={(date) => setDateBirth(date)} />
                 <label htmlFor="start-date" >Start Date</label>
-                <DatePicker idInput="start-date" dateInput={startDate} updateDate={setStartDate}/>
+                {/* <DatePicker idInput="start-date" dateInput={startDate} updateDate={setStartDate}/> */}
+                <input type="date" id="start-date" selected={startDate} onChange={(date) => setStartDate(date)} />
                 <fieldset className="address">
                     <legend>Address</legend>
                     <label htmlFor="street">Street</label>
