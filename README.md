@@ -13,7 +13,7 @@ HRnet employee creation and management app
 ## Prerequisites for installation
 
 - [Git](https://git-scm.com)
-- [Node](https://nodejs.org/en/) v18.4.0
+- [Node](https://nodejs.org/en/) v14.17.5
 
 ## Dependencies
 
