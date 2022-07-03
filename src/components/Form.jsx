@@ -5,7 +5,8 @@ import departments from '../data/department';
 import states from '../data/state';
 import save from "../utils/functions/saveEmployee";
 import resetEmployee from "../utils/functions/resetForm";
-import Modal from 'react-modal';
+//import Modal from 'react-modal';
+import Modal from 'modalsrp14'
 import customStyles from "../utils/modalCustumization/modalStyleCustomization";
 
 
