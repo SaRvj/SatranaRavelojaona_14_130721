@@ -24,8 +24,8 @@ function Form () {
     const [city, setCity] = useState("")
     const [zipCode, setZipCode] = useState("")
     const [dateBirth, setDateBirth] = useState('')
-    //const [startDate, setStartDate] = useState('')
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState('')
+    //const [startDate, setStartDate] = useState(new Date());
 
     function handleSubmit(e) {
         console.log (firstname, lastname, street, city, zipCode, startDate, dateBirth, departments);
@@ -79,7 +79,7 @@ function Form () {
                     style={customStyles}
                     >
                         <div onClick={closeModal} className="createEmployee-body-button-close">X</div>
-                        <div className="modal">Employee create !</div>
+                        <div className="modal">Employee created !</div>
                     </Modal>
                 : null}
         </form>
