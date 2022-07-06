@@ -6,8 +6,8 @@ import states from '../data/state';
 import save from "../utils/functions/saveEmployee";
 import resetEmployee from "../utils/functions/resetForm";
 //import Modal from 'react-modal';
-import Modal from 'modalsrp14'
-import customStyles from "../utils/modalCustumization/modalStyleCustomization";
+import {Modal } from 'modal-satrana14'
+//import customStyles from "../utils/modalCustumization/modalStyleCustomization";
 
 
 /**
@@ -42,10 +42,6 @@ function Form () {
             setModalIsOpen(true)
         }
     }
-
-    function closeModal() {
-        setModalIsOpen(false);
-    }
     
     return (
         <form className="createEmployee-body_form" id="createEmployee-body_form" action="#" onSubmit={handleSubmit}>
@@ -73,16 +69,12 @@ function Form () {
                 <label htmlFor="department">Department</label>
                 <Select options={departments} id="department" aria-label="department" className="select"/>
                 <button  className="button-submit" >Save</button>
-                {modalIsOpen === true ?
-                    <Modal
-                    isOpen={modalIsOpen}
-                    ariaHideApp={false}
-                    style={customStyles}
-                    >
-                        <div onClick={closeModal} className="createEmployee-body-button-close">X</div>
-                        <div className="modal">Employee created !</div>
-                    </Modal>
-                : null}
+                <Modal
+                    show={modalIsOpen}
+                    setShow={setModalIsOpen}
+                    title="Success !"
+                    text="Employee created"
+                />
         </form>
     )
 }
